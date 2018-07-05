@@ -119,10 +119,9 @@
         resetComments();
     }
 
-    // function update(assignedTo, state, comment) {
     function update(changedValues) {
         let updateValue;
-        if (comment !== undefined && comment !== "") {
+        if (changedValues['comment'] !== undefined && changedValues['comment'] !== "") {
             updateValue = JSON.stringify([{
                 "op": "add",
                 "path": "/fields/System.AssignedTo",
